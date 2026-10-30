@@ -40,7 +40,7 @@ in {
     cd-storage = "source ${dir-scripts}/storage/cd.sh";
 
     # ? -  Nixos Alias/Override
-    nixos-rebuild-switch = "sudo nixos-rebuild switch -I nixos-config=${dir-dots}/etc/nixos/configuration.nix";
+    nixos-rebuild-switch = "sudo nixos-rebuild switch -I nixos-config=${dir-dots}/etc.nixos/configuration.nix";
     nixos-channel-update = "sudo nix-channel --update && switch-dots-rebuild";
     nixos-os-update = "bash ${dir-scripts}/nixos-update.sh";
 

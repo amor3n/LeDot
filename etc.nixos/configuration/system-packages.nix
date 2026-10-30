@@ -118,7 +118,7 @@
       # ! Browser
       # !-----------------------------------------------------------------------------------------------------------------------
       # ? - Web browser
-      firefox
+      librewolf
       # ? - Onion Routing Web browser
       tor-browser
 
