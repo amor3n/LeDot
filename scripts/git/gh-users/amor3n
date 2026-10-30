@@ -1,0 +1,4 @@
+amor3n
+gh auth switch --user amor3n
+git config --global user.name "amor3n"
+git config --global user.email "amor3n.prsnl@gmail.com"
