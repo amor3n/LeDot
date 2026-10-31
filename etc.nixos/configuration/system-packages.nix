@@ -9,11 +9,8 @@
   Covers baseline tooling every machine is expected to have regardless
   of target: Wayland/niri session utilities, hardware/power CLI tools,
   video playback, system monitoring, archive handling, core networking
-  clients, shell replacements (eza/fd/ripgrep/starship), terminal
-  emulator, browsers, the full development toolchain (compilers,
-  language runtimes, formatters, git/gh), Discord, and the GTK/Qt
-  runtime libraries required for GUI apps to render correctly under
-  Wayland/niri.
+  clients, shell utilities, and the GTK/Qt runtime libraries required for
+  GUI apps to render correctly under Wayland/niri.
 */
 
 { config, pkgs, ... }:
@@ -58,18 +55,48 @@
       htop
       # ? - JSON processor
       jq
-      # ? - ???
+      # ? - List open files and associated processes
       lsof
-      # ? - ???
+      # ? - Hardware and BIOS/SMBIOS information tool
       dmidecode
+
+      # !----------------------------------
+      # ! Browser
+      # !-----------------------------------------------------------------------------------------------------------------------
+      # ? - Web browser
+      librewolf
+      # ? - Onion Routing Web browser
+      tor-browser
+
+      # !----------------------------------
+      # ! Social
+      # !-----------------------------------------------------------------------------------------------------------------------
+      # ? - Discord  ┐( ˘_˘)┌
+      discord
+
+      # !----------------------------------
+      # ! Terminal
+      # !-----------------------------------------------------------------------------------------------------------------------
+      # ? - GPU-accelerated terminal emulator
+      alacritty
+
+      # !----------------------------------
+      # ! Shell
+      # !-----------------------------------------------------------------------------------------------------------------------
+      # ? - Modern replacement for ls
+      eza
+      # ? - Simple, fast alternative to find
+      fd
+      # ? - Fast grep alternative
+      ripgrep
+      # ? - Cross-shell prompt and customizer
+      starship
 
       # !----------------------------------
       # ! Archives
       # !-----------------------------------------------------------------------------------------------------------------------
       # ? - File archiver for 7z and other formats
       p7zip
-      # ? - File archiver for rar and other formats
-      unrar
 
       # !----------------------------------
       # ! Bluetooth
@@ -90,82 +117,12 @@
       # !----------------------------------
       # ! Shell
       # !-----------------------------------------------------------------------------------------------------------------------
-      # ? - Modern replacement for ls
-      eza
-      # ? - Simple, fast alternative to find
-      fd
-      # ? - Fast grep alternative
-      ripgrep
-      # ? - Cross-shell prompt and customizer
-      starship
       # ? - clipboard access (wl-copy/wl-paste) - lots of scripts assume this exists
       wl-clipboard
-      # ? - 
+      # ? - Display directory tree structure
       tree
-      # ? -
+      # ? - Core system utilities (dmesg, lsblk, fdisk, etc.)
       util-linux
-
-
-
-
-      # !----------------------------------
-      # ! Terminal
-      # !-----------------------------------------------------------------------------------------------------------------------
-      # ? - GPU-accelerated terminal emulator
-      alacritty
-
-      # !----------------------------------
-      # ! Browser
-      # !-----------------------------------------------------------------------------------------------------------------------
-      # ? - Web browser
-      librewolf
-      # ? - Onion Routing Web browser
-      tor-browser
-
-      # !----------------------------------
-      # ! Development Tools
-      # !-----------------------------------------------------------------------------------------------------------------------
-      # ? - Build system generator
-      cmake
-      # ? - GNU compiler collection
-      gcc
-      # ? - GitHub CLI
-      gh
-      # ? - Version control system
-      git
-      # ? - Nix code formatter
-      nixfmt
-      # ? - Node.js runtime
-      nodejs
-      # ? - Python 3 interpreter
-      python3
-      # ? - Rust toolchain manager
-      rustup
-      # ? - MinGW-w64 cross-compiler for building Windows .exe from Linux
-      pkgs.pkgsCross.mingwW64.buildPackages.gcc
-      # ? - Static pthreads lib required by rustc's windows-gnu linker step
-      pkgs.pkgsCross.mingwW64.windows.pthreads
-      # ? - TLS/crypto library, required by openssl-sys and similar Rust crates
-      openssl
-      # ? - Locate compiled libraries for builds (needed by Rust/Node crates linking C libs)
-      pkg-config
-      # ? - Shell script formatter
-      shfmt
-      # ? - code editor
-      vscode
-      # ? - Zig compiler
-      zig
-      # ? - ???
-      postgresql
-      # ? - ???
-      sqlx-cli
-
-
-      # !----------------------------------
-      # ! Social
-      # !-----------------------------------------------------------------------------------------------------------------------
-      # ? - Discord  ┐( ˘_˘)┌
-      discord
 
       # !----------------------------------
       # ! Gui Dependencies

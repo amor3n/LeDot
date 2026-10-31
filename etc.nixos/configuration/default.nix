@@ -13,6 +13,7 @@
 
     # ? - packages
     ./system-packages.nix
+    ./user-packages.nix
 
     # ? - packages
     ./fonts.nix

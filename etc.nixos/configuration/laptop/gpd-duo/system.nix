@@ -73,5 +73,6 @@ files (audio.nix, networking.nix, power.nix) rather than living here.
 
   boot.kernelParams = [
   "quiet"
+  "random.trust_cpu=0"
 ];
 }

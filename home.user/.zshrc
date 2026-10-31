@@ -16,8 +16,3 @@ compinit
 
 bindkey "^[[1;5C" forward-char   # Ctrl+Right = move 1 char right
 bindkey "^[[1;5D" backward-char  # Ctrl+Left = move 1 char left
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/amor_iii/.lmstudio/bin"
-# End of LM Studio CLI section
-
